@@ -18,7 +18,7 @@ export class CadastrarTarefaComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.tarefa = new Tarefa();
+   // this.tarefa = new Tarefa();
   }
 
   cadastrar(): void {

@@ -1,4 +1,5 @@
-<h1>Editar tarefa</h1>
+
+<h1 style="text-align: center">Editar tarefa</h1>
 
 <div class="well">
   <form #formTarefa="ngForm" *ngIf="tarefa">
@@ -27,9 +28,11 @@
     <div class="form-group text-center">
       <input 
         type="submit"
+        (click)="atualizar()"
         class="btn btn-success"
-        value="Atualizar">
-      <a 
+        value="Atualizar"
+        [disabled]="!formTarefa.form.valid">
+      <a [routerLink]="['/tarefas']"
         class="btn btn-default">
         <span class="glyphicon glyphicon-chevron-left" 
           aria-hidden="true"></span> Voltar
